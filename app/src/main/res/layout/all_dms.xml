@@ -73,6 +73,7 @@
 
     <!-- Search Bar -->
     <EditText
+        android:id="@+id/searchBar"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:hint="Search for DMs"
@@ -82,6 +83,7 @@
         android:drawableEnd="@drawable/search_logo"
         android:drawablePadding="16dp"
         android:layout_marginTop="15dp"/>
+
 
 
 
