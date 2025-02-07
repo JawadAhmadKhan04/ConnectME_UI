@@ -15,7 +15,7 @@
 
         <!-- Main Activity -->
         <activity
-            android:name=".DMListActivity"
+            android:name=".CallActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

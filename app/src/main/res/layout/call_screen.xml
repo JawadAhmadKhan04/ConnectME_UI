@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@android:color/white">
+
+    <!-- Contact Name -->
+
+    <!-- Profile Picture -->
+
+    <TextView
+        android:id="@+id/contactName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Henry Benjamin"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Call Duration -->
+    <ImageView
+        android:id="@+id/profileImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/circle_shape"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dm_image" />
+
+    <TextView
+        android:id="@+id/callDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="10:32"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/rounded_rectangle"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- Speaker Button -->
+        <ImageView
+            android:id="@+id/btnSpeaker"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="35dp"
+            android:contentDescription="Speaker"
+            android:src="@drawable/three_dots" />
+
+        <!-- Video Call Button -->
+        <ImageView
+            android:id="@+id/btnVideo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="35dp"
+            android:contentDescription="Video Call"
+            android:src="@drawable/video_call"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <!-- Mute Button -->
+        <ImageView
+            android:id="@+id/btnMute"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/mic_logo"
+            android:contentDescription="Mute"
+            android:layout_marginEnd="20dp"
+            android:clickable="true"
+            android:focusable="true"/>
+
+
+        <!-- End Call Button -->
+        <ImageView
+            android:id="@+id/btnEndCall"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:contentDescription="End Call"
+            android:src="@drawable/end_call" />
+    </LinearLayout>
+
+</LinearLayout>
