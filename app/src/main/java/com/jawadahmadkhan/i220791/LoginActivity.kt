@@ -11,12 +11,12 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.login)
 
         // Find the register text
-//        val registerText = findViewById<TextView>(R.id.registerText)
+        val registerText = findViewById<TextView>(R.id.registerText)
 
         // Set click listener on register text
-//        registerText.setOnClickListener {
-//            val intent = Intent(this, RegisterActivity::class.java)
-//            startActivity(intent)
-//        }
+        registerText.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
