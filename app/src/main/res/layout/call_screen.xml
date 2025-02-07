@@ -19,6 +19,7 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
+
     <!-- Call Duration -->
     <ImageView
         android:id="@+id/profileImage"
@@ -48,6 +49,17 @@
         android:orientation="horizontal"
         android:padding="16dp">
 
+        <!-- Three Dots Button -->
+        <ImageView
+            android:id="@+id/threedots"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="35dp"
+            android:contentDescription="Three DOts"
+            android:src="@drawable/three_dots" />
+
+
         <!-- Speaker Button -->
         <ImageView
             android:id="@+id/btnSpeaker"
@@ -56,7 +68,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginEnd="35dp"
             android:contentDescription="Speaker"
-            android:src="@drawable/three_dots" />
+            android:src="@drawable/speaker_off" />
 
         <!-- Video Call Button -->
         <ImageView

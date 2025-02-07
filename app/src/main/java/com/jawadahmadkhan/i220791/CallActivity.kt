@@ -8,8 +8,10 @@ class CallActivity : AppCompatActivity() {
 
     private lateinit var muteButton: ImageView
     private lateinit var stopCamera: ImageView
+    private lateinit var stopSpeaker: ImageView
     private var isMuted = false  // Track mute state
     private var isCameraOff = false  // Track mute state
+    private var isSpeakerOff = true  // Track mute state
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,6 +20,7 @@ class CallActivity : AppCompatActivity() {
         val endCall = findViewById<ImageView>(R.id.btnEndCall)
         muteButton = findViewById(R.id.btnMute)
         stopCamera = findViewById(R.id.btnVideo)
+        stopSpeaker = findViewById(R.id.btnSpeaker)
 
         // End call when button is clicked
         endCall.setOnClickListener {
@@ -27,6 +30,10 @@ class CallActivity : AppCompatActivity() {
         // Toggle microphone on/off
         muteButton.setOnClickListener {
             toggleMute()
+        }
+
+        stopSpeaker.setOnClickListener {
+            toggleSpeaker()
         }
 
         stopCamera.setOnClickListener {
@@ -42,6 +49,16 @@ class CallActivity : AppCompatActivity() {
         }
         isMuted = !isMuted  // Toggle state
     }
+
+    private fun toggleSpeaker() {
+        if (isSpeakerOff) {
+            stopSpeaker.setImageResource(R.drawable.speaker_off)  // Switch to speaker_off icon
+        } else {
+            stopSpeaker.setImageResource(R.drawable.speaker_on) // Switch to speaker_on icon
+        }
+        isSpeakerOff = !isSpeakerOff  // Toggle state
+    }
+
 
     private fun toggleCamera() {
         if (isCameraOff) {
