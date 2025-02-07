@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         // Detect tap anywhere on the screen
         val rootLayout = findViewById<View>(android.R.id.content)
         rootLayout.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
     }
