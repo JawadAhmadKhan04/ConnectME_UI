@@ -15,7 +15,7 @@
 
         <!-- Main Activity -->
         <activity
-            android:name=".CallActivity"
+            android:name=".FollowerListActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
