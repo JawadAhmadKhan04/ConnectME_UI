@@ -15,7 +15,7 @@
 
         <!-- Main Activity -->
         <activity
-            android:name=".FollowTabActivity"
+            android:name=".EditProfileActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

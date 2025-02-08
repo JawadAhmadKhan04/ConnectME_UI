@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@android:color/white">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Profile"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/doneButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#8B5E3B"/>
+
+    </LinearLayout>
+
+    <!-- Profile Picture -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/dm_image"
+            android:scaleType="centerCrop"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/circle_shape"/>
+
+        <ImageView
+            android:id="@+id/editProfileIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/camera_logo"
+            android:layout_alignBottom="@id/profileImage"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+    <!-- Name -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Olivia Daniel"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Name Field -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textStyle="bold"
+        android:paddingBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/nameInput"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Olivia Daniel"
+        android:background="@drawable/edit_text_border"
+        android:padding="10dp"/>
+
+    <!-- Username Field -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:textStyle="bold"
+        android:paddingTop="10dp"
+        android:paddingBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/usernameInput"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="OliviaD"
+        android:background="@drawable/edit_text_border"
+        android:padding="10dp"/>
+
+    <!-- Contact Number -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contact Number"
+        android:textStyle="bold"
+        android:paddingTop="10dp"
+        android:paddingBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/contactInput"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="+42 7412 5443058"
+        android:background="@drawable/edit_text_border"
+        android:padding="10dp"/>
+
+    <!-- Bio -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bio"
+        android:textStyle="bold"
+        android:paddingTop="10dp"
+        android:paddingBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/bioInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Just an average 14 year old"
+        android:background="@android:color/transparent"
+        android:padding="10dp"
+        android:hint="Enter your bio..."
+        android:textColorHint="#A9A9A9"
+        android:layout_marginBottom="10dp"/>
+
+</LinearLayout>
