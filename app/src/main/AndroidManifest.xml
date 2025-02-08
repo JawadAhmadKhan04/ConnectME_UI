@@ -15,7 +15,7 @@
 
         <!-- Main Activity -->
         <activity
-            android:name=".EditProfileActivity"
+            android:name=".SearchActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

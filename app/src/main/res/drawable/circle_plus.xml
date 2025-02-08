@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Circular Background -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#5C4023" /> <!-- Brown Color -->
+            <size android:width="60dp" android:height="60dp"/>
+        </shape>
+    </item>
+
+    <!-- Plus Icon -->
+    <item>
+        <bitmap
+            android:src="@drawable/plus_sign"
+            android:gravity="center"/>
+    </item>
+
+</layer-list>
