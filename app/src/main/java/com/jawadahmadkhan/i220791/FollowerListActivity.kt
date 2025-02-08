@@ -1,6 +1,8 @@
 package com.jawadahmadkhan.i220791
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -24,5 +26,11 @@ class FollowerListActivity : AppCompatActivity() {
         )
 
         FollowerRecyclerView.adapter = FollowerAdapter(FollowerList)
+
+        // Tab switching: Navigate to Following List
+        findViewById<TextView>(R.id.followingTab).setOnClickListener {
+            val intent = Intent(this, FollowingListActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
