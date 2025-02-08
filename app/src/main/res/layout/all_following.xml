@@ -1,42 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".FollowingListActivity">
+    android:padding="16dp">
 
     <!-- Top Section -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:paddingBottom="10dp">
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:gravity="center_vertical"-->
+<!--        android:paddingBottom="10dp">-->
 
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/back_button_logo"
-            android:contentDescription="Back button"
-            android:layout_marginEnd="10dp" />
+<!--        <ImageView-->
+<!--            android:layout_width="24dp"-->
+<!--            android:layout_height="24dp"-->
+<!--            android:src="@drawable/back_button_logo"-->
+<!--            android:contentDescription="Back button"-->
+<!--            android:layout_marginEnd="10dp" />-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="OliviaD"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_weight="1"/>
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="OliviaD"-->
+<!--            android:textSize="18sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:layout_weight="1"/>-->
 
-        <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/new_message_logo"
-            android:contentDescription="Edit button"/>
-    </LinearLayout>
+<!--        <ImageView-->
+<!--            android:layout_width="24dp"-->
+<!--            android:layout_height="24dp"-->
+<!--            android:src="@drawable/new_message_logo"-->
+<!--            android:contentDescription="Edit button"/>-->
+<!--    </LinearLayout>-->
 
     <!-- Tabs -->
     <LinearLayout
@@ -71,7 +69,6 @@
             android:background="@drawable/underline_brown"/>
     </LinearLayout>
 
-
     <!-- Search Bar -->
     <EditText
         android:id="@+id/searchBar"
@@ -90,5 +87,5 @@
         android:id="@+id/followingRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingTop="10dp"/>
-</LinearLayout>
+        android:paddingTop="60dp"/>
+</FrameLayout>

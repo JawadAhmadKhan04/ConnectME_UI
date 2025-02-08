@@ -15,7 +15,7 @@
 
         <!-- Main Activity -->
         <activity
-            android:name=".FollowerListActivity"
+            android:name=".FollowTabActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,9 +33,9 @@
             android:name=".RegisterActivity"
             android:exported="true" />
 
-        <activity
-            android:name=".FollowingListActivity"
-            android:exported="true" />
+<!--        <activity-->
+<!--            android:name=".FollowTabActivity"-->
+<!--            android:exported="true" />-->
 
 <!--        <activity-->
 <!--            android:name=".FollowerListActivity"-->
