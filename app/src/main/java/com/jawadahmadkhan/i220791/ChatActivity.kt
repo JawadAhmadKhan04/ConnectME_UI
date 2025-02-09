@@ -20,6 +20,15 @@ class ChatActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val video_call_pressed = findViewById<ImageView>(R.id.video_call_button)
+
+        // Set click listener on register text
+        video_call_pressed.setOnClickListener {
+            val intent = Intent(this, VideoCallActivity::class.java)
+            startActivity(intent)
+        }
+
+
         val backButton = findViewById<ImageView>(R.id.back_button)
         backButton.setOnClickListener {
             finish()
