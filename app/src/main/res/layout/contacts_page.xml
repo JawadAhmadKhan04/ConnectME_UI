@@ -1,10 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="#FFFFFF"
     android:padding="16dp">
+
+    <!-- Back Button and Title -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/back_button_logo"
+            android:layout_marginRight="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OliviaD"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/new_message_logo" />
+    </LinearLayout>
+
+    <!-- Contacts Heading -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contacts"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:textColor="#000000" />
 
     <!-- Search Bar -->
     <EditText
@@ -20,28 +59,54 @@
         android:layout_marginTop="15dp"/>
 
 
-    <!-- Recent Searches Heading -->
-    <TextView
-        android:id="@+id/recent_search_heading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Recent searches"
-        android:textStyle="bold"
-        android:textSize="16sp"
-        android:textColor="#5C4033"
-        android:layout_below="@id/searchBar"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp" />
-
-    <!-- Recent Searches RecyclerView -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recent_search_list"
+    <!-- In Contacts Section -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_below="@id/recent_search_heading"
-        android:layout_above="@id/bottom_nav"
-        android:divider="@null"
-        android:paddingHorizontal="8dp" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In Contacts"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#5C4033" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_in_contacts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:paddingVertical="8dp" />
+    </LinearLayout>
+
+
+    <!-- Invite New Friends Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Invite New Friends"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#5C4033" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_invite_friends"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:paddingVertical="8dp" />
+    </LinearLayout>
+
+
 
     <!-- Bottom Navigation Bar -->
     <LinearLayout
@@ -87,6 +152,7 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
+                android:alpha="0.3"
                 android:src="@drawable/search_logo" />
 
             <TextView
@@ -94,7 +160,7 @@
                 android:layout_height="wrap_content"
                 android:text="Search"
                 android:textSize="13sp"
-                android:textColor="#000000" />
+                android:textColor="#D3D3D3" />
         </LinearLayout>
 
         <!-- Center Plus Button -->
@@ -145,16 +211,16 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/contact_logo"
-                android:alpha="0.3" />
+                android:src="@drawable/contact_logo" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Contacts"
                 android:textSize="14sp"
-                android:textColor="#D3D3D3" />
+                android:textColor="#000000" />
         </LinearLayout>
     </LinearLayout>
 
-</RelativeLayout>
+
+</LinearLayout>

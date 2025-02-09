@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:gravity="center_vertical">
+
+    <!-- Profile Picture -->
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/circle_shape"
+        android:scaleType="centerCrop"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/dm_image"
+        android:contentDescription="Profile Picture"/>
+
+    <!-- Name -->
+    <TextView
+        android:id="@+id/contact_name"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="Contact Name"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:textStyle="bold"/>
+
+    <!-- Message Icon -->
+    <ImageView
+        android:id="@+id/message_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/new_message_logo"
+        android:contentDescription="Message"/>
+</LinearLayout>

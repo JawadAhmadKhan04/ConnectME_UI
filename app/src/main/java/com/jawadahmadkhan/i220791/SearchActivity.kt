@@ -20,7 +20,7 @@ class SearchActivity : AppCompatActivity() {
         setContentView(R.layout.searching_people)
 
         // Initialize Views
-        searchInput = findViewById(R.id.search_input)
+        searchInput = findViewById(R.id.searchBar)
         recentSearchRecyclerView = findViewById(R.id.recent_search_list)
 
         // Setup RecyclerView
