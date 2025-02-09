@@ -87,6 +87,7 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
+                android:id="@+id/search_btn"
                 android:src="@drawable/search_logo" />
 
             <TextView
@@ -145,6 +146,7 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
+                android:id="@+id/contacts_btn"
                 android:src="@drawable/contact_logo"
                 android:alpha="0.3" />
 

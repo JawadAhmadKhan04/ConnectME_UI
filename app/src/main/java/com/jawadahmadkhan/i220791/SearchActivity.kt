@@ -1,9 +1,9 @@
 package com.jawadahmadkhan.i220791
 
+import android.content.Intent
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import android.widget.EditText
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -19,25 +19,24 @@ class SearchActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.searching_people)
 
-        // Initialize Views
         searchInput = findViewById(R.id.searchBar)
         recentSearchRecyclerView = findViewById(R.id.recent_search_list)
 
-        // Setup RecyclerView
         searchAdapter = SearchHistoryAdapter(recentSearches) { name ->
             removeSearchItem(name)
         }
         recentSearchRecyclerView.layoutManager = LinearLayoutManager(this)
         recentSearchRecyclerView.adapter = searchAdapter
 
-        // Search input listener
-        searchInput.addTextChangedListener(object : TextWatcher {
-            override fun afterTextChanged(s: Editable?) {}
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                // Handle search filtering (if needed)
-            }
-        })
+        setupNavigation()
+    }
+
+    private fun setupNavigation() {
+        val contactsButton = findViewById<ImageView>(R.id.contacts_btn)
+
+        contactsButton.setOnClickListener {
+            startActivity(Intent(this, ContactsActivity::class.java))
+        }
     }
 
     private fun removeSearchItem(name: String) {
