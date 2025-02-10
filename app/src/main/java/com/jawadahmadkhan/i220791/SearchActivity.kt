@@ -29,6 +29,13 @@ class SearchActivity : AppCompatActivity() {
         recentSearchRecyclerView.adapter = searchAdapter
 
         setupNavigation()
+
+        val newpost = findViewById<ImageView>(R.id.center_plus)
+
+        // Set click listener
+        newpost.setOnClickListener {
+            startActivity(Intent(this, PostCameraActivity::class.java))
+        }
     }
 
     private fun setupNavigation() {
@@ -43,4 +50,6 @@ class SearchActivity : AppCompatActivity() {
         recentSearches.remove(name)
         searchAdapter.notifyDataSetChanged()
     }
+
+
 }

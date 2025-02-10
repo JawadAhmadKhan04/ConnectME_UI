@@ -173,6 +173,7 @@
                 android:layout_height="45dp"
                 android:layout_gravity="center"
                 android:alpha="0.95"
+                android:id="@+id/center_plus"
                 android:src="@drawable/circle_plus" />
         </FrameLayout>
 

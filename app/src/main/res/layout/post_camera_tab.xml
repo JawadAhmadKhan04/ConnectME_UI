@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray">
+
+    <!-- Close Button (Top Left) -->
+    <ImageView
+        android:id="@+id/close_button"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/cross_icon"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"/>
+
+    <!-- Next Button (Top Right) -->
+    <TextView
+        android:id="@+id/next_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:textSize="16sp"
+        android:textColor="#6B4E3D"
+        android:textStyle="bold"
+        android:layout_margin="16dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"/>
+
+    <!-- Bottom Controls -->
+    <LinearLayout
+        android:id="@+id/bottom_controls"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <!-- Gallery Thumbnail (Left) -->
+        <ImageView
+            android:id="@+id/gallery_thumbnail"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/sample_scenery"
+            android:scaleType="centerCrop"
+            android:layout_marginStart="35dp"
+            android:background="@drawable/square_white"/>
+
+        <!-- Capture Button (Center) -->
+        <ImageView
+            android:id="@+id/capture_button"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/camera_click_button"
+            android:layout_marginStart="45dp"
+            android:layout_weight="1"/>
+
+        <!-- Switch Camera Button (Right) -->
+        <ImageView
+            android:id="@+id/switch_camera"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/camera_rotate_logo"
+            android:scaleType="centerInside"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <!-- Post and Story Text (Below Capture Button) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom_controls"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:id="@+id/post_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Post"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_marginStart="75dp"/>
+
+        <TextView
+            android:id="@+id/story_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Story"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_marginStart="40dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

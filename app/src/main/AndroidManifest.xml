@@ -15,7 +15,7 @@
 
         <!-- Main Activity -->
         <activity
-            android:name=".ChatActivity"
+            android:name=".ContactsActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,14 +24,17 @@
         </activity>
 
         <!-- Login Activity -->
+<!--        <activity-->
+<!--            android:name=".ContactsActivity"-->
+<!--            android:exported="true" />-->
+
         <activity
-            android:name=".CallActivity"
+            android:name=".PostCameraActivity"
             android:exported="true" />
 
         <activity
-            android:name=".VideoCallActivity"
+            android:name=".SearchActivity"
             android:exported="true" />
-
 <!--         Register Activity -->
 <!--        <activity-->
 <!--            android:name=".RegisterActivity"-->

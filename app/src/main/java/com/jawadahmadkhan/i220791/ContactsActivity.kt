@@ -15,6 +15,13 @@ class ContactsActivity : AppCompatActivity() {
 
         setupRecyclerViews()
         setupNavigation()
+
+        val newpost = findViewById<ImageView>(R.id.center_plus)
+
+        // Set click listener
+        newpost.setOnClickListener {
+            startActivity(Intent(this, PostCameraActivity::class.java))
+        }
     }
 
     private fun setupRecyclerViews() {
