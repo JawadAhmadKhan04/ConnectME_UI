@@ -15,7 +15,7 @@
 
         <!-- Main Activity -->
         <activity
-            android:name=".ContactsActivity"
+            android:name=".ProfileActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,6 +38,10 @@
 <!--         Register Activity -->
         <activity
             android:name=".PostCameraActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".ContactsActivity"
             android:exported="true" />
 
 <!--        <activity-->
