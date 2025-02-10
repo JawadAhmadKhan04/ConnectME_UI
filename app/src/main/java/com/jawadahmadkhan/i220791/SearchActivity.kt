@@ -34,7 +34,7 @@ class SearchActivity : AppCompatActivity() {
 
         // Set click listener
         newpost.setOnClickListener {
-            startActivity(Intent(this, PostCameraActivity::class.java))
+            startActivity(Intent(this, PostGalleryActivity::class.java))
         }
     }
 

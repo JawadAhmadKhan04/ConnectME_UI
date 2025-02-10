@@ -29,16 +29,16 @@
 <!--            android:exported="true" />-->
 
         <activity
-            android:name=".PostCameraActivity"
+            android:name=".PostGalleryActivity"
             android:exported="true" />
 
         <activity
             android:name=".SearchActivity"
             android:exported="true" />
 <!--         Register Activity -->
-<!--        <activity-->
-<!--            android:name=".RegisterActivity"-->
-<!--            android:exported="true" />-->
+        <activity
+            android:name=".PostCameraActivity"
+            android:exported="true" />
 
 <!--        <activity-->
 <!--            android:name=".FollowTabActivity"-->
