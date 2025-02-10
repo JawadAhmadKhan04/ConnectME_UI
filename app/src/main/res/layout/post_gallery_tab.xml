@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- Top Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/top_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <!-- Close Button -->
+        <ImageView
+            android:id="@+id/close_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/cross_icon"
+            android:layout_marginStart="10dp"/>
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="New post"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <!-- Next Button -->
+        <TextView
+            android:id="@+id/next_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_marginEnd="10dp"/>
+    </LinearLayout>
+
+        <!-- Selected Image Display -->
+    <ImageView
+        android:id="@+id/selected_image"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="centerCrop"
+        android:layout_below="@id/top_nav_bar"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="9dp"
+        android:background="@android:color/darker_gray"/>
+
+    <!-- Small Camera Icon -->
+    <ImageView
+        android:id="@+id/select_multiple_icon"
+        android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:src="@drawable/select_multiple_images"
+        android:layout_toStartOf="@id/camera_icon"
+        android:layout_below="@id/selected_image"
+        android:layout_marginEnd="18dp"/>
+
+        <!-- Small Camera Icon -->
+    <ImageView
+        android:id="@+id/camera_icon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/camera_logo"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/selected_image"
+        android:layout_marginEnd="18dp"/>
+
+        <!-- Recents Dropdown -->
+    <LinearLayout
+        android:id="@+id/recents_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/selected_image"
+        android:layout_marginStart="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/recents_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recents"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/next_button"
+            android:layout_marginStart="4dp"/>
+    </LinearLayout>
+
+        <!-- Gallery Grid -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/gallery_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/recents_layout"
+        android:layout_marginTop="8dp"
+        android:clipToPadding="false"/>
+
+</RelativeLayout>
