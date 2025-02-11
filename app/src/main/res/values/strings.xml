@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">i220791</string>
-    <string name="register_text">Don’t have an account? <b>Register</b></string>
+    <string name="register_text">Don\'t have an account? <b><font color='#8B5E3B'>Register</font></b></string>
+    <string name="welcome">Welcome!</string>
+    <string name="we_re_happy_to_see_you_please_login_to_continue">We’re happy to see you. Please login to continue.</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Forgot password?</string>
 </resources>
