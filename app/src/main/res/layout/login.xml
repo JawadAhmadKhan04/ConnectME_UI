@@ -14,7 +14,7 @@
         android:id="@+id/myImageView"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:src="@drawable/connectme_logo"
+        android:src="@drawable/connectme_logo_2"
         android:scaleType="fitCenter"
         android:contentDescription="My Image" />
 
@@ -51,6 +51,7 @@
         android:layout_height="50dp"
         android:hint="Username"
         android:padding="10dp"
+        android:textColorHint="#B0B0B0"
         android:layout_marginStart="8dp"
         android:layout_marginBottom="10dp" />
 
