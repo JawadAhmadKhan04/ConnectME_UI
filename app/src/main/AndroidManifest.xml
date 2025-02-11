@@ -15,7 +15,7 @@
 
         <!-- Main Activity -->
         <activity
-            android:name=".MainActivity"
+            android:name=".FollowerActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,6 +27,12 @@
         <activity
             android:name=".LoginActivity"
             android:exported="true" />
+
+        <activity
+            android:name=".FollowingActivity"
+            android:exported="true" />
+
+
         <!--         Register Activity -->
         <activity
             android:name=".RegisterActivity"

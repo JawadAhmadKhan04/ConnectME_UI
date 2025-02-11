@@ -1,3 +1,6 @@
 package com.jawadahmadkhan.i220791
 
-data class FollowingItem(val name: String, val imageRes: Int)
+data class Following(
+    val name: String,
+    val profileImage: Int // Resource ID of profile picture
+)

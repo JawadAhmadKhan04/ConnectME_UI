@@ -3,6 +3,7 @@ package com.jawadahmadkhan.i220791
 import android.graphics.Color
 import android.os.Bundle
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
@@ -29,6 +30,14 @@ class DMListActivity : AppCompatActivity() {
         // Tab click listeners
         dmsTab.setOnClickListener { viewPager.currentItem = 0 }
         requestsTab.setOnClickListener { viewPager.currentItem = 1 }
+
+        // Find the close button
+        val closeposts = findViewById<ImageView>(R.id.back_button)
+
+        // Set click listener
+        closeposts.setOnClickListener {
+            finish() // Closes the activity
+        }
 
         // ViewPager change listener to update underline and search bar hint
         viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {

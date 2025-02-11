@@ -5,7 +5,14 @@
     android:layout_height="match_parent"
     android:background="#E0E0E0">
 
-    <!-- Header: User Name and Call Time -->
+    <!-- Main Video Area (Background for Video Call) -->
+    <View
+        android:id="@+id/main_video_area"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#D9D9D9"/>
+
+    <!-- Header: User Name and Call Time (Overlay on Video) -->
     <LinearLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
@@ -13,109 +20,146 @@
         android:orientation="vertical"
         android:padding="16dp"
         android:gravity="center"
-        android:background="@android:color/white">
+        android:background="@android:color/transparent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Henry Benjamin"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="#000000"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Henry Benjamin"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#000000"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="10:32"
-            android:textSize="14sp"
-            android:textColor="#666666"/>
-    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10:32"
+        android:paddingTop="2dp"
+        android:textSize="18sp"
+        android:textColor="#000000"/>
+</LinearLayout>
 
-    <!-- Main Video Area -->
-    <View
-        android:id="@+id/main_video_area"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/header"
-        android:layout_above="@+id/bottom_controls"
-        android:background="#D9D9D9"/>
-
-    <!-- Small Video Preview (Bottom Right) -->
-    <View
+<View
         android:id="@+id/small_video_preview"
         android:layout_width="120dp"
         android:layout_height="160dp"
-        android:background="@android:color/white"
+        android:background="@drawable/rounded_video_preview"
         android:layout_alignParentEnd="true"
-        android:layout_above="@+id/bottom_controls"
+        android:layout_above="@id/bottom_controls"
         android:layout_margin="16dp"
         android:elevation="4dp"/>
 
+    <!-- Control Buttons (Aligned to Bottom) -->
     <LinearLayout
+        android:id="@+id/bottom_controls"
         android:layout_width="wrap_content"
         android:layout_height="80dp"
-        android:layout_marginStart="7dp"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/rounded_rectangle"
         android:gravity="center"
         android:orientation="horizontal"
-        android:layout_marginBottom="10dp"
-        android:id="@+id/bottom_controls"
         android:padding="16dp">
 
         <!-- Three Dots Button -->
-        <ImageView
-            android:id="@+id/threedots"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="35dp"
-            android:contentDescription="Three DOts"
-            android:src="@drawable/three_dots" />
+        <FrameLayout
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/circle_background"
+            android:gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="15dp">
 
-
-        <!-- Speaker Button -->
-        <ImageView
-            android:id="@+id/btnSpeaker"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="35dp"
-            android:contentDescription="Speaker"
-            android:src="@drawable/speaker_off" />
+            <ImageView
+                android:id="@+id/threedots"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/three_dots"
+                android:contentDescription="Three Dots"
+                android:layout_gravity="center"/>
+        </FrameLayout>
 
         <!-- Video Call Button -->
-        <ImageView
-            android:id="@+id/btnVideo"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginEnd="35dp"
-            android:contentDescription="Video Call"
-            android:src="@drawable/video_call"
-            android:clickable="true"
-            android:focusable="true"/>
+        <FrameLayout
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/circle_background"
+            android:gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="15dp">
+
+            <ImageView
+                android:id="@+id/btnVideo"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/video_call"
+                android:contentDescription="Video Call"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true"/>
+        </FrameLayout>
+
+        <!-- Speaker Button -->
+        <FrameLayout
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/circle_background"
+            android:gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="15dp">
+
+            <ImageView
+                android:id="@+id/btnSpeaker"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/speaker_on"
+                android:contentDescription="Speaker"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true"/>
+        </FrameLayout>
 
         <!-- Mute Button -->
-        <ImageView
-            android:id="@+id/btnMute"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/mic_logo"
-            android:contentDescription="Mute"
-            android:layout_marginEnd="20dp"
-            android:clickable="true"
-            android:focusable="true"/>
+        <FrameLayout
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/circle_background"
+            android:gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="15dp">
 
+            <ImageView
+                android:id="@+id/btnMute"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/mic_logo"
+                android:contentDescription="Mute"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true"/>
+        </FrameLayout>
 
         <!-- End Call Button -->
-        <ImageView
-            android:id="@+id/btnEndCall"
+        <FrameLayout
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginStart="10dp"
-            android:backgroundTint="@android:color/holo_red_dark"
-            android:contentDescription="End Call"
-            android:src="@drawable/end_call" />
+            android:background="@drawable/circle_red_background"
+            android:gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp">
+
+            <ImageView
+                android:id="@+id/btnEndCall"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/end_call"
+                android:contentDescription="End Call"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+
     </LinearLayout>
 
 </RelativeLayout>

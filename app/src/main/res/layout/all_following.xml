@@ -1,40 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:background="@color/white">
 
     <!-- Top Section -->
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="horizontal"-->
-<!--        android:gravity="center_vertical"-->
-<!--        android:paddingBottom="10dp">-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="10dp">
 
-<!--        <ImageView-->
-<!--            android:layout_width="24dp"-->
-<!--            android:layout_height="24dp"-->
-<!--            android:src="@drawable/back_button_logo"-->
-<!--            android:contentDescription="Back button"-->
-<!--            android:layout_marginEnd="10dp" />-->
+        <ImageView
+            android:layout_width="24dp"
+            android:id="@+id/back_button"
+            android:layout_height="24dp"
+            android:src="@drawable/back_button_logo"
+            android:contentDescription="Back button"
+            android:layout_marginEnd="10dp" />
 
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="OliviaD"-->
-<!--            android:textSize="18sp"-->
-<!--            android:textStyle="bold"-->
-<!--            android:layout_weight="1"/>-->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="OliviaD"
+            android:textColor="@color/black"
+            android:paddingLeft="10dp"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
 
-<!--        <ImageView-->
-<!--            android:layout_width="24dp"-->
-<!--            android:layout_height="24dp"-->
-<!--            android:src="@drawable/new_message_logo"-->
-<!--            android:contentDescription="Edit button"/>-->
-<!--    </LinearLayout>-->
+    </LinearLayout>
+
 
     <!-- Tabs -->
     <LinearLayout
@@ -48,24 +49,23 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Followers"
+            android:text="410 Followers"
             android:textSize="16sp"
-            android:textStyle="bold"
             android:gravity="center"
             android:paddingBottom="4dp"
-            android:textColor="#A9A9A9"/>
+            android:textColor="#000000"/>
 
         <TextView
             android:id="@+id/followingTab"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Following"
-            android:textStyle="bold"
-            android:paddingBottom="4dp"
+            android:text="387 Following"
             android:textSize="16sp"
-            android:textColor="#8B5E3B"
+            android:textStyle="bold"
             android:gravity="center"
+            android:paddingBottom="4dp"
+            android:textColor="#8B5E3B"
             android:background="@drawable/underline_brown"/>
     </LinearLayout>
 
@@ -77,15 +77,16 @@
         android:hint="Search"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
-        android:background="#D3D3D3"
-        android:drawableEnd="@drawable/search_logo"
+        android:background="@null"
+        android:drawableEnd="@drawable/search_logo_alpha"
         android:drawablePadding="16dp"
-        android:layout_marginTop="15dp"/>
+        android:layout_marginTop="10dp"/>
 
     <!-- RecyclerView -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/followingRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingTop="60dp"/>
-</FrameLayout>
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="10dp"/>
+</LinearLayout>
