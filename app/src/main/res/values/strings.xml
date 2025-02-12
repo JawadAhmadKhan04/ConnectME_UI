@@ -6,6 +6,7 @@
     <string name="terms_text"><font color='#4A2E16'><b><u>Terms of Service</u></b></font> and <font color='#4A2E16'><b><u>Privacy Policy</u></b></font></string>
     <string name="we_re_happy_to_see_you_please_login_to_continue">We’re happy to see you. Please login to continue.</string>
     <string name="underlined_bio"><u>Bio</u></string>
+    <string name="post_caption"><b>Emily James</b> Had a great hike across this beautiful landscape 💙🏞</string>
     <string name="login">Login</string>
     <string name="forgot_password">Forgot password?</string>
 </resources>

@@ -25,7 +25,7 @@ class RegisterActivity : AppCompatActivity() {
 
         // Set click listener on register text
         loginbtn.setOnClickListener {
-            val intent = Intent(this, RegisterActivity::class.java)
+            val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
     }

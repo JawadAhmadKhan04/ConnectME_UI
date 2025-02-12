@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="8dp">
+
+    <!-- User Info -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:paddingStart="14dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/dm_image"
+            android:scaleType="centerCrop"
+            android:background="@drawable/circle_shape"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Emily James"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/triangle_dots"
+            android:layout_weight="1"
+            android:layout_gravity="end"
+            android:layout_marginEnd="-200dp"
+            android:gravity="end"/>
+    </LinearLayout>
+
+    <!-- Post Image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:src="@drawable/sample_scenery"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Like & Comment -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/heart_icon"
+            android:layout_marginEnd="8dp"/>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/comment_icon"/>
+
+        <ImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/share_logo"/>
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#000000"
+        android:alpha="0.3"/>
+
+
+    <!-- Caption -->
+    <TextView
+        android:layout_width="match_parent"
+        android:paddingLeft="14dp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:text="@string/post_caption"
+        android:textSize="16sp"/>
+
+</LinearLayout>

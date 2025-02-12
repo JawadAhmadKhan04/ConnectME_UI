@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/darker_gray">
@@ -22,71 +23,94 @@
         android:layout_height="wrap_content"
         android:text="Next"
         android:textSize="16sp"
-        android:textColor="#6B4E3D"
+        android:textColor="@color/special"
         android:textStyle="bold"
         android:layout_margin="16dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"/>
 
-    <!-- Bottom Controls -->
+    <!-- Bottom Controls (Shifted Up) -->
     <LinearLayout
         android:id="@+id/bottom_controls"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_alignParentBottom="true"
+        android:layout_above="@id/post_story_layout"
         android:gravity="center"
         android:padding="10dp"
         android:orientation="horizontal">
 
-        <!-- Gallery Thumbnail (Left) -->
+    <!-- Gallery Thumbnail (Left) inside a Rounded CardView -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="4dp"
+        android:layout_marginStart="35dp">
+
         <ImageView
             android:id="@+id/gallery_thumbnail"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/sample_scenery"
             android:scaleType="centerCrop"
-            android:layout_marginStart="35dp"
-            android:background="@drawable/square_white"/>
+            android:src="@drawable/sample_scenery"/>
+    </androidx.cardview.widget.CardView>
 
-        <!-- Capture Button (Center) -->
-        <ImageView
-            android:id="@+id/capture_button"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/camera_click_button"
-            android:layout_marginStart="45dp"
-            android:layout_weight="1"/>
+    <!-- Capture Button (Center) -->
+    <ImageView
+        android:id="@+id/capture_button"
+        android:layout_width="78dp"
+        android:layout_height="78dp"
+        android:src="@drawable/camera_capture"
+        android:layout_marginStart="-10dp"
+        android:layout_weight="1"/>
 
-        <!-- Switch Camera Button (Right) -->
-        <ImageView
-            android:id="@+id/switch_camera"
+        <FrameLayout
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/camera_rotate_logo"
-            android:scaleType="centerInside"
             android:layout_marginEnd="20dp"
-            android:layout_weight="1"/>
+            android:layout_marginBottom="0dp"
+            android:layout_alignParentEnd="true">
+
+            <!-- Circular Background -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/circle_background"/>
+
+            <!-- Switch Camera Button -->
+            <ImageView
+                android:id="@+id/switch_camera"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/camera_rotate_logo"
+                android:scaleType="centerInside"
+                android:layout_gravity="center"/>
+        </FrameLayout>
 
     </LinearLayout>
 
-    <!-- Post and Story Text (Below Capture Button) -->
+    <!-- Post and Story Text (Now at the Bottom) -->
     <LinearLayout
+        android:id="@+id/post_story_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/bottom_controls"
+        android:layout_alignParentBottom="true"
         android:orientation="horizontal"
         android:gravity="center"
+        android:layout_marginStart="85dp"
         android:paddingBottom="10dp">
+
+
 
         <TextView
             android:id="@+id/post_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Post"
-            android:textSize="14sp"
+            android:textSize="17sp"
             android:textColor="@android:color/black"
             android:textStyle="bold"
-            android:layout_marginStart="75dp"/>
+            android:layout_marginEnd="40dp"/>
 
         <TextView
             android:id="@+id/story_text"
@@ -94,9 +118,8 @@
             android:layout_height="wrap_content"
             android:text="Story"
             android:textSize="14sp"
-            android:textColor="@android:color/black"
-            android:textStyle="bold"
-            android:layout_marginStart="40dp"/>
+            android:textColor="@android:color/black"/>
     </LinearLayout>
+
 
 </RelativeLayout>

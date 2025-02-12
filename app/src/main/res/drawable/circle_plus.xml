@@ -5,7 +5,7 @@
     <item>
         <shape android:shape="oval">
             <solid android:color="#5C4023" /> <!-- Brown Color -->
-            <size android:width="60dp" android:height="60dp"/>
+            <size android:width="50dp" android:height="50dp"/>
         </shape>
     </item>
 

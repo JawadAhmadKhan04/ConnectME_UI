@@ -15,7 +15,7 @@
 
         <!-- Main Activity -->
         <activity
-            android:name=".FollowerActivity"
+            android:name=".HomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,15 +27,22 @@
         <activity
             android:name=".LoginActivity"
             android:exported="true" />
+        <activity
+            android:name=".DMListActivity"
+            android:exported="true" />
 
         <activity
-            android:name=".FollowingActivity"
+            android:name=".RegisterActivity"
             android:exported="true" />
+
+<!--        <activity-->
+<!--            android:name=".HomeActivity"-->
+<!--            android:exported="true" />-->
 
 
         <!--         Register Activity -->
         <activity
-            android:name=".RegisterActivity"
+            android:name=".NewPostActivity"
             android:exported="true" />
 
         <activity
@@ -54,13 +61,33 @@
             android:name=".ContactsActivity"
             android:exported="true" />
 
-<!--        <activity-->
-<!--            android:name=".FollowTabActivity"-->
-<!--            android:exported="true" />-->
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".EditProfileActivity"
+            android:exported="true" />
 
-<!--        <activity-->
-<!--            android:name=".FollowerListActivity"-->
-<!--            android:exported="true" />-->
+        <activity
+            android:name=".FollowerActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".FollowingActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".VideoCallActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".ChatActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".CallActivity"
+            android:exported="true" />
+
 
     </application>
 

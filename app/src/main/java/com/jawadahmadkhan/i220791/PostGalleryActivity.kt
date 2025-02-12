@@ -3,6 +3,7 @@ package com.jawadahmadkhan.i220791
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -14,7 +15,7 @@ class PostGalleryActivity : AppCompatActivity() {
 
         // Setup RecyclerView for gallery
         val galleryRecyclerView = findViewById<RecyclerView>(R.id.gallery_grid)
-        galleryRecyclerView.layoutManager = GridLayoutManager(this, 3) // 3 columns
+        galleryRecyclerView.layoutManager = GridLayoutManager(this, 4) // 3 columns
         galleryRecyclerView.adapter = GalleryAdapter(getSampleImages()) // Load images
 
 
@@ -23,6 +24,14 @@ class PostGalleryActivity : AppCompatActivity() {
         // Set click listener on register text
         switchcam.setOnClickListener {
             val intent = Intent(this, PostCameraActivity::class.java)
+            startActivity(intent)
+        }
+
+        val done = findViewById<TextView>(R.id.next_button)
+
+        // Set click listener on register text
+        done.setOnClickListener {
+            val intent = Intent(this, NewPostActivity::class.java)
             startActivity(intent)
         }
 

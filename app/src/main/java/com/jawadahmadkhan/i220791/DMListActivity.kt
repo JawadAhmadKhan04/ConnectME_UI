@@ -1,5 +1,6 @@
 package com.jawadahmadkhan.i220791
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.widget.EditText
@@ -37,6 +38,15 @@ class DMListActivity : AppCompatActivity() {
         // Set click listener
         closeposts.setOnClickListener {
             finish() // Closes the activity
+        }
+
+        
+
+        val openchat = findViewById<ImageView>(R.id.open_chat)
+
+        // Set click listener
+        openchat.setOnClickListener {
+            startActivity(Intent(this, ChatActivity::class.java))
         }
 
         // ViewPager change listener to update underline and search bar hint

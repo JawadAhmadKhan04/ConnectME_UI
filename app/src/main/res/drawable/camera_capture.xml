@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Outer White Border -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/white"/> <!-- White Border -->
+            <size android:width="100dp" android:height="100dp"/> <!-- Full size -->
+            <stroke
+                android:width="3dp"
+                android:color="@color/special" />
+
+        </shape>
+    </item>
+
+    <!-- Inner Brown Circle -->
+    <item
+        android:left="5dp"
+        android:right="5dp"
+        android:top="5dp"
+        android:bottom="5dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/special"/> <!-- Brown Color -->
+        </shape>
+    </item>
+
+</layer-list>

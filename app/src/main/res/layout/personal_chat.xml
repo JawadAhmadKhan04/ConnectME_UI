@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:weightSum="1"
     android:background="@android:color/white">
 
     <!-- Header -->
@@ -16,253 +17,75 @@
         android:background="@android:color/white">
 
         <ImageView
+            android:id="@+id/back_button"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:id="@+id/back_button"
             android:src="@drawable/back_button_logo"
             android:layout_marginEnd="8dp"/>
-
-<!--        <ImageView-->
-<!--            android:layout_width="50dp"-->
-<!--            android:layout_height="50dp"-->
-<!--            android:src="@drawable/dm_image"-->
-<!--            android:scaleType="centerCrop"-->
-<!--            android:background="@drawable/circle_shape"-->
-<!--            android:layout_marginEnd="10dp"/>-->
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textColor="@color/black"
             android:text="Henry Benjamin"
             android:textSize="20sp"
             android:textStyle="bold"/>
 
         <ImageView
+            android:id="@+id/call_button"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:id="@+id/call_button"
             android:src="@drawable/call_logo"
             android:layout_marginEnd="16dp"/>
 
         <ImageView
+            android:id="@+id/video_call_button"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:id="@+id/video_call_button"
             android:src="@drawable/video_call_white_logo"/>
     </LinearLayout>
 
-    <!-- Profile Section -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:padding="16dp">
-
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/dm_image"
-            android:scaleType="centerCrop"
-            android:background="@drawable/circle_shape"
-            android:layout_marginBottom="8dp"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="View Profile"
-            android:backgroundTint="#D8C1A8"/>
-    </LinearLayout>
-
-    <!-- Chat Messages -->
-    <ScrollView
+    <!-- Chat Messages (RecyclerView) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:padding="16dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <!-- Sent Message -->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/chat_bubble_sent"
-                android:padding="10dp"
-                android:layout_marginBottom="8dp"
-                android:gravity="end"
-                android:layout_gravity="end">
-
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:text="Hello, How are you?"
-                    android:textSize="16sp"
-                    android:paddingEnd="8dp"/>
-
-            </LinearLayout>
-            <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:layout_marginStart="330dp"
-                android:text="10:30"
-                android:textSize="10sp"
-                android:textColor="@android:color/darker_gray"/>
-
-            <!-- Received Message -->
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="start"
-                android:layout_marginBottom="8dp">
-
-                <!-- Profile Image -->
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/dm_image"
-                    android:scaleType="centerCrop"
-                    android:layout_marginEnd="8dp"
-                    android:background="@drawable/circle_shape"/>
-
-                <!-- Message Bubble -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/chat_bubble_received"
-                    android:padding="10dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <!-- Message Text -->
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Hi, I am great, Wbu?"
-                        android:textSize="16sp"
-                        android:paddingEnd="8dp"/>
-
-
-                </LinearLayout>
-            </LinearLayout>
-            <!-- Timestamp -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="10:32"
-                android:textSize="10sp"
-                android:textColor="@android:color/darker_gray"
-                android:layout_marginStart="55dp"
-                android:layout_gravity="bottom"/>
-
-            <!-- Sent Message -->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/chat_bubble_sent"
-                android:padding="10dp"
-                android:layout_marginBottom="8dp"
-                android:gravity="end"
-                android:layout_gravity="end">
-
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:text="I am doing well"
-                    android:textSize="16sp"
-                    android:paddingEnd="8dp"/>
-
-
-            </LinearLayout>
-
-            <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:layout_marginStart="330dp"
-                android:text="10:30"
-                android:textSize="10sp"
-                android:textColor="@android:color/darker_gray"/>
-
-            <!-- Received Message -->
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="start"
-                android:layout_marginBottom="8dp">
-
-                <!-- Profile Image -->
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/dm_image"
-                    android:scaleType="centerCrop"
-                    android:layout_marginEnd="8dp"
-                    android:background="@drawable/circle_shape"/>
-
-                <!-- Message Bubble -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/chat_bubble_received"
-                    android:padding="10dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Good to know"
-                        android:textSize="16sp"
-                        android:paddingEnd="8dp"/>
-
-
-                </LinearLayout>
-
-            </LinearLayout>
-            <!-- Timestamp -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="10:32"
-                android:textSize="10sp"
-                android:textColor="@android:color/darker_gray"
-                android:layout_marginStart="55dp"
-                android:layout_gravity="bottom"/>
-
-
-        </LinearLayout>
-    </ScrollView>
+        android:padding="16dp"
+        android:overScrollMode="never"
+        android:scrollbars="none"/>
 
     <!-- Input Box -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#D8C1A8"
+        android:background="@drawable/rounded_input_box"
         android:padding="12dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_margin="14dp">
 
         <EditText
+            android:id="@+id/messageInput"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="Typing..."
+            android:textStyle="bold"
+            android:alpha="0.5"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:background="@null"
-            android:padding="8dp"
+            android:padding="10dp"
             android:textSize="16sp"/>
 
         <ImageButton
+            android:id="@+id/sendMessageButton"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/message_send_logo"
-            android:background="@null"/>
+            android:background="@null"
+            android:padding="8dp"/>
     </LinearLayout>
 
 </LinearLayout>

@@ -29,6 +29,6 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:paddingTop="6dp"
-        android:src="@drawable/new_message_logo"
+        android:src="@drawable/comment_icon"
         android:contentDescription="New Message icon"/>
 </LinearLayout>

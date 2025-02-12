@@ -26,7 +26,7 @@ class LoginActivity : AppCompatActivity() {
 
         // Set click listener on register text
         loginbtn.setOnClickListener {
-            val intent = Intent(this, RegisterActivity::class.java)
+            val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
 
@@ -34,7 +34,7 @@ class LoginActivity : AppCompatActivity() {
 
         // Set click listener on register text
         googlebtn.setOnClickListener {
-            val intent = Intent(this, RegisterActivity::class.java)
+            val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
 
@@ -42,7 +42,7 @@ class LoginActivity : AppCompatActivity() {
 
         // Set click listener on register text
         applebtn.setOnClickListener {
-            val intent = Intent(this, RegisterActivity::class.java)
+            val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
 
@@ -50,7 +50,7 @@ class LoginActivity : AppCompatActivity() {
 
         // Set click listener on register text
         facebookbtn.setOnClickListener {
-            val intent = Intent(this, RegisterActivity::class.java)
+            val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
     }

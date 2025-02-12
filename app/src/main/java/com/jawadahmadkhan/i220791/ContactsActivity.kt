@@ -16,12 +16,6 @@ class ContactsActivity : AppCompatActivity() {
         setupRecyclerViews()
         setupNavigation()
 
-        val newpost = findViewById<ImageView>(R.id.center_plus)
-
-        // Set click listener
-        newpost.setOnClickListener {
-            startActivity(Intent(this, PostGalleryActivity::class.java))
-        }
     }
 
     private fun setupRecyclerViews() {
@@ -48,10 +42,40 @@ class ContactsActivity : AppCompatActivity() {
     }
 
     private fun setupNavigation() {
-        val searchButton = findViewById<ImageView>(R.id.search_btn)
+        val newpost = findViewById<ImageView>(R.id.center_plus)
 
-        searchButton.setOnClickListener {
+        // Set click listener
+        newpost.setOnClickListener {
+            startActivity(Intent(this, PostGalleryActivity::class.java))
+        }
+
+        val search_person = findViewById<ImageView>(R.id.search_btn)
+
+        // Set click listener
+        search_person.setOnClickListener {
             startActivity(Intent(this, SearchActivity::class.java))
         }
+
+        val profile_view = findViewById<ImageView>(R.id.profile_btn)
+
+        // Set click listener
+        profile_view.setOnClickListener {
+            startActivity(Intent(this, ProfileActivity::class.java))
+        }
+
+        val home_view = findViewById<ImageView>(R.id.home_btn)
+
+        // Set click listener
+        home_view.setOnClickListener {
+            startActivity(Intent(this, HomeActivity::class.java))
+        }
+
+
+        val contactsButton = findViewById<ImageView>(R.id.contacts_btn)
+
+        contactsButton.setOnClickListener {
+            startActivity(Intent(this, ContactsActivity::class.java))
+        }
     }
+
 }
