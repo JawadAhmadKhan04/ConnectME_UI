@@ -48,13 +48,13 @@
     <ImageView
         android:id="@+id/selected_image"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="420dp"
         android:scaleType="centerCrop"
         android:layout_below="@id/top_nav_bar"
-        android:layout_marginStart="22dp"
-        android:layout_marginEnd="22dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
         android:layout_marginBottom="9dp"
-        android:background="@android:color/darker_gray"/>
+        android:background="@drawable/sample_scenery"/>
 
     <!-- Small Camera Icon -->
     <ImageView
@@ -92,6 +92,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Recents"
+            android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"/>
 
@@ -108,7 +109,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/recents_layout"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
+        android:background="@color/black"
         android:clipToPadding="false"/>
 
 </RelativeLayout>

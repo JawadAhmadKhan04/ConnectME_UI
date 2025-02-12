@@ -33,6 +33,6 @@
         android:id="@+id/message_icon"
         android:layout_width="24dp"
         android:layout_height="24dp"
-        android:src="@drawable/new_message_logo"
+        android:src="@drawable/comment_icon"
         android:contentDescription="Message"/>
 </LinearLayout>

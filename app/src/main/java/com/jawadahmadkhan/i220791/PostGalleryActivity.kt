@@ -51,6 +51,10 @@ class PostGalleryActivity : AppCompatActivity() {
             R.drawable.sample_scenery, R.drawable.sample_scenery, R.drawable.sample_scenery,
             R.drawable.sample_scenery, R.drawable.sample_scenery, R.drawable.sample_scenery,
             R.drawable.sample_scenery, R.drawable.sample_scenery, R.drawable.sample_scenery,
+            R.drawable.sample_scenery, R.drawable.sample_scenery, R.drawable.sample_scenery,
+            R.drawable.sample_scenery, R.drawable.sample_scenery, R.drawable.sample_scenery,
+            R.drawable.sample_scenery, R.drawable.sample_scenery, R.drawable.sample_scenery,
+            R.drawable.sample_scenery, R.drawable.sample_scenery, R.drawable.sample_scenery,
             R.drawable.sample_scenery, R.drawable.sample_scenery, R.drawable.sample_scenery
         )
     }

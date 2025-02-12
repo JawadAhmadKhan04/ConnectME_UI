@@ -16,6 +16,14 @@ class ContactsActivity : AppCompatActivity() {
         setupRecyclerViews()
         setupNavigation()
 
+        val dm = findViewById<ImageView>(R.id.dm_open)
+
+        // Set click listener
+        dm.setOnClickListener {
+            startActivity(Intent(this, DMListActivity::class.java))
+        }
+
+
     }
 
     private fun setupRecyclerViews() {
