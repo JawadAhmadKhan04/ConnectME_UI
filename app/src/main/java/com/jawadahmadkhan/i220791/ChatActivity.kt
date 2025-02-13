@@ -44,6 +44,9 @@ class ChatActivity : AppCompatActivity() {
 
         chatAdapter.addMessage(ChatMessage("Hello how are you?", true)) // Sent by user
         chatAdapter.addMessage(ChatMessage("Hi I am great. WBU?", false)) // Sent by user
+        chatAdapter.addMessage(ChatMessage("I am doing well", true)) // Sent by user
+        chatAdapter.addMessage(ChatMessage("Good to know", false)) // Sent by user
+
 
 //        val messageInput = findViewById<EditText>(R.id.messageInput)
 //        val sendMessageButton = findViewById<ImageButton>(R.id.sendMessageButton)

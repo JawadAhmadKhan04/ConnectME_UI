@@ -29,7 +29,7 @@ class ProfileActivity : AppCompatActivity() {
         }
 
         val following_id = findViewById<TextView>(R.id.following_id)
-        followers_id.setOnClickListener {
+        following_id.setOnClickListener {
             val intent = Intent(this, FollowerActivity::class.java)
             startActivity(intent)
         }

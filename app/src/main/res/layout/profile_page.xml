@@ -13,7 +13,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <!-- Top Bar -->
@@ -48,7 +48,8 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/dm_image"
                 android:layout_marginTop="16dp"
-                android:background="@android:color/darker_gray"
+                android:background="@drawable/circle_background3"
+                android:backgroundTint="@null"
                 android:clipToOutline="true"/>
 
             <!-- User Name -->
@@ -57,7 +58,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Olivia Daniel"
-                android:textSize="20sp"
+                android:textSize="26sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/black"
                 android:layout_gravity="center"
@@ -65,12 +66,14 @@
 
             <!-- Bio -->
             <TextView
+                android:paddingTop="10dp"
                 android:id="@+id/user_bio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="two bananas for a pound, three bananas for a euro"
-                android:textSize="14sp"
-                android:textColor="@android:color/darker_gray"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
                 android:layout_gravity="center"
                 android:layout_marginTop="4dp"/>
 
@@ -86,21 +89,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginEnd="45dp"
                     android:gravity="center">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="7"
-                        android:textSize="16sp"
+                        android:textSize="20sp"
                         android:textStyle="bold"
                         android:textColor="@android:color/black"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="posts"
+                        android:text="Posts"
                         android:textSize="14sp"
                         android:textColor="@android:color/darker_gray"/>
                 </LinearLayout>
@@ -109,7 +112,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginEnd="45dp"
                     android:gravity="center">
 
                     <TextView
@@ -117,7 +120,7 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/follower_id"
                         android:text="410"
-                        android:textSize="16sp"
+                        android:textSize="20sp"
                         android:textStyle="bold"
                         android:textColor="@android:color/black"/>
 
@@ -133,6 +136,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
+
                     android:gravity="center">
 
                     <TextView
@@ -140,7 +144,7 @@
                         android:layout_height="wrap_content"
                         android:text="387"
                         android:id="@+id/following_id"
-                        android:textSize="16sp"
+                        android:textSize="20sp"
                         android:textStyle="bold"
                         android:textColor="@android:color/black"/>
 
@@ -157,8 +161,8 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/gallery_grid"
                 android:layout_width="match_parent"
-                android:layout_height="345dp"
-                android:layout_marginTop="16dp"
+                android:layout_height="479dp"
+                android:layout_marginTop="25dp"
                 android:clipToPadding="false"
                 android:numColumns="3" />
         </LinearLayout>

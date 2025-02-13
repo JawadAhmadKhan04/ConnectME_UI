@@ -15,7 +15,7 @@
 
         <!-- Main Activity -->
         <activity
-            android:name=".HomeActivity"
+            android:name=".ChatActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,9 +35,9 @@
             android:name=".RegisterActivity"
             android:exported="true" />
 
-<!--        <activity-->
-<!--            android:name=".HomeActivity"-->
-<!--            android:exported="true" />-->
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true" />
 
 
         <!--         Register Activity -->
@@ -80,9 +80,9 @@
             android:name=".VideoCallActivity"
             android:exported="true" />
 
-        <activity
-            android:name=".ChatActivity"
-            android:exported="true" />
+<!--        <activity-->
+<!--            android:name=".ChatActivity"-->
+<!--            android:exported="true" />-->
 
         <activity
             android:name=".CallActivity"
