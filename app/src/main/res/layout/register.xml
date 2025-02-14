@@ -132,10 +132,10 @@
     <Button
         android:id="@+id/btn_register"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="65dp"
         android:text="Register"
-        android:background="@drawable/rectangle_button"
-        android:backgroundTint="#5A3620"
+        style="@style/CustomButton"
+        android:textColor="@color/white"
         android:textStyle="bold"
         android:layout_marginBottom="20dp"/>
 

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="1"
-    android:background="@android:color/white">
+    android:background="@android:color/black">
 
     <!-- Header -->
     <LinearLayout
@@ -14,36 +14,24 @@
         android:orientation="horizontal"
         android:padding="16dp"
         android:gravity="center_vertical"
-        android:background="@android:color/white">
+        android:background="@android:color/black">
 
         <ImageView
             android:id="@+id/back_button"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/back_button_logo"
+            android:src="@drawable/back_button_white_logo"
             android:layout_marginEnd="8dp"/>
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:text="Henry Benjamin"
             android:textSize="20sp"
             android:textStyle="bold"/>
 
-        <ImageView
-            android:id="@+id/call_button"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/call_logo"
-            android:layout_marginEnd="16dp"/>
-
-        <ImageView
-            android:id="@+id/video_call_button"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/video_call_white_logo"/>
     </LinearLayout>
 
     <!-- Main Content -->
@@ -80,19 +68,38 @@
                 <Button
                     android:id="@+id/view_profile_btn"
                     android:layout_width="wrap_content"
-                    android:layout_height="50dp"
+                    android:layout_height="45dp"
                     android:layout_marginTop="25dp"
                     android:layout_marginStart="125dp"
                     android:text="View Profile"
                     style="@style/CustomButton"
-                    android:textColor="@color/black"
-                    android:backgroundTint="#C9BCAE"
+                    android:textColor="@color/white"
                     android:textStyle="bold"
                     android:layout_marginBottom="20dp"/>
 
                 <!-- Chat Messages (RecyclerView) -->
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/chatRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    android:padding="16dp"
+                    android:overScrollMode="never"
+                    android:scrollbars="none"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="You’ve turned on vanish mode. New messages will disappear in
+24 hours after everyone has seen them."
+                    android:textStyle="normal"
+                    android:padding="8dp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="13dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/chatHiddenRecyclerView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:nestedScrollingEnabled="false"
@@ -108,7 +115,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/rounded_input_box"
+        android:background="@drawable/rounded_input_box_design"
         android:padding="12dp"
         android:orientation="horizontal"
         android:layout_margin="14dp">
@@ -119,10 +126,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="Typing..."
-            android:textStyle="bold"
             android:alpha="0.5"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
             android:background="@null"
             android:padding="10dp"
             android:textSize="16sp"/>
@@ -131,9 +137,9 @@
             android:id="@+id/sendMessageButton"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/message_send_logo"
             android:background="@null"
-            android:layout_marginTop="5dp"/>
+            android:layout_marginTop="5dp"
+            android:src="@drawable/message_send_logo" />
     </LinearLayout>
 
 </LinearLayout>

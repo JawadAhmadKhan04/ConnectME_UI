@@ -19,6 +19,7 @@
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:paddingTop="10dp"
         android:text="User Name"
         android:textSize="20sp"

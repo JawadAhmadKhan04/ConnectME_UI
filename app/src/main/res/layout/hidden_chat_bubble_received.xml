@@ -31,13 +31,12 @@
             android:id="@+id/messageText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/chat_bubble_sent"
+            android:background="@drawable/chat_bubble_received"
             android:padding="10dp"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="14sp"
             android:gravity="start"/>
         <!-- Message Bubble -->
-
 
 
         <!-- Timestamp -->
@@ -52,6 +51,7 @@
             android:layout_gravity="end"
             android:includeFontPadding="false"
             android:letterSpacing="0.05"/>
+
     </LinearLayout>
 
 </LinearLayout>

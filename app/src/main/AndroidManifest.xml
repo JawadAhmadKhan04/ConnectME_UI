@@ -15,7 +15,7 @@
 
         <!-- Main Activity -->
         <activity
-            android:name=".ChatActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -80,9 +80,13 @@
             android:name=".VideoCallActivity"
             android:exported="true" />
 
-<!--        <activity-->
-<!--            android:name=".ChatActivity"-->
-<!--            android:exported="true" />-->
+        <activity
+            android:name=".ChatActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".ChatHiddenActivity"
+            android:exported="true" />
 
         <activity
             android:name=".CallActivity"

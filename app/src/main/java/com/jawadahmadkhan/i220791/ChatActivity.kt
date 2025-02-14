@@ -2,6 +2,7 @@ package com.jawadahmadkhan.i220791
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.ImageView
@@ -30,6 +31,11 @@ class ChatActivity : AppCompatActivity() {
         }
 
         // Set click listeners
+        findViewById<Button>(R.id.view_profile_btn).setOnClickListener {
+            startActivity(Intent(this, ProfileActivity::class.java))
+        }
+
+
         findViewById<ImageView>(R.id.call_button).setOnClickListener {
             startActivity(Intent(this, CallActivity::class.java))
         }
@@ -42,10 +48,18 @@ class ChatActivity : AppCompatActivity() {
             finish()
         }
 
-        chatAdapter.addMessage(ChatMessage("Hello how are you?", true)) // Sent by user
-        chatAdapter.addMessage(ChatMessage("Hi I am great. WBU?", false)) // Sent by user
-        chatAdapter.addMessage(ChatMessage("I am doing well", true)) // Sent by user
-        chatAdapter.addMessage(ChatMessage("Good to know", false)) // Sent by user
+        chatAdapter.addMessage(ChatMessage("Hello how are you?", 1)) // Sent by user
+        chatAdapter.addMessage(ChatMessage("Hi I am great. WBU?", 2)) // Sent by user
+        chatAdapter.addMessage(ChatMessage("I am doing well", 1)) // Sent by user
+        chatAdapter.addMessage(ChatMessage("Good to know", 2)) // Sent by user
+        chatAdapter.addMessage(ChatMessage("Hello how are you?", 1)) // Sent by user
+        chatAdapter.addMessage(ChatMessage("Hi I am great. WBU?", 2)) // Sent by user
+        chatAdapter.addMessage(ChatMessage("I am doing well", 1)) // Sent by user
+        chatAdapter.addMessage(ChatMessage("Good to know", 2)) // Sent by user
+        chatAdapter.addMessage(ChatMessage("Hello how are you?", 1)) // Sent by user
+        chatAdapter.addMessage(ChatMessage("Hi I am great. WBU?", 2)) // Sent by user
+        chatAdapter.addMessage(ChatMessage("I am doing well", 1)) // Sent by user
+        chatAdapter.addMessage(ChatMessage("Good to know", 2)) // Sent by user
 
 
 //        val messageInput = findViewById<EditText>(R.id.messageInput)

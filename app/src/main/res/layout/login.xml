@@ -80,12 +80,13 @@
     <Button
         android:id="@+id/LoginButton"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="65dp"
+        style="@style/CustomButton"
         android:text="@string/login"
-        android:background="@drawable/rectangle_button"
-        android:backgroundTint="#5A3620"
+        android:textColor="@color/white"
         android:textStyle="bold"
         android:layout_marginBottom="20dp"/>
+
 
 
     <LinearLayout

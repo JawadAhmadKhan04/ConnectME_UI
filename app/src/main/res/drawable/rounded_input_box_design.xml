@@ -1,0 +1,19 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Background Color -->
+    <solid android:color="@color/special"/> <!-- Adjusted to match the image -->
+
+    <!-- Rounded Corners -->
+    <corners android:radius="20dp"/>
+
+    <!-- Padding -->
+    <padding android:left="16dp" android:right="16dp"/>
+
+    <!-- Dotted Border -->
+    <stroke
+        android:width="2dp"
+        android:color="#FFFFFF"
+        android:dashWidth="3dp"
+        android:dashGap="2dp"/>
+</shape>

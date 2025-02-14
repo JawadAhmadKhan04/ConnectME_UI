@@ -6,22 +6,19 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class ChatAdapter(private val messages: MutableList<ChatMessage>) :
-    RecyclerView.Adapter<ChatAdapter.ChatViewHolder>() {
+class ChatHiddenAdapter(private val messages: MutableList<ChatHiddenMessage>) :
+    RecyclerView.Adapter<ChatHiddenAdapter.ChatViewHolder>() {
 
     inner class ChatViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val messageText: TextView = view.findViewById(R.id.messageText)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChatViewHolder {
-        val layoutId = when (viewType) {
-            1 -> R.layout.chat_bubble_sent // Sent messages
-            2 -> R.layout.chat_bubble_received // Received messages
-            3 -> R.layout.chat_bubble_hidden_sent // Hidden messages
-            else -> R.layout.chat_bubble_hidden_received // Hidden messages
-        }
-
-        val view = LayoutInflater.from(parent.context).inflate(layoutId, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(
+            if (viewType == 1) R.layout.hidden_chat_bubble_sent else R.layout.hidden_chat_bubble_received,
+            parent,
+            false
+        )
         return ChatViewHolder(view)
     }
 
@@ -33,14 +30,14 @@ class ChatAdapter(private val messages: MutableList<ChatMessage>) :
 
     }
 
-    override fun getItemViewType(position: Int): Int {
-        return messages[position].isSentByUser
-    }
 
+    override fun getItemViewType(position: Int): Int {
+        return if (messages[position].isSentByUser) 1 else 0
+    }
 
     override fun getItemCount(): Int = messages.size
 
-    fun addMessage(message: ChatMessage) {
+    fun addMessage(message: ChatHiddenMessage) {
         messages.add(message)
         notifyItemInserted(messages.size - 1)
     }
