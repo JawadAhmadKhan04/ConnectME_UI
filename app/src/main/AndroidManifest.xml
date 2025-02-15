@@ -13,6 +13,11 @@
         android:supportsRtl="true"
         tools:targetApi="31">
 
+        <!-- Meta-data for Espresso UI Testing -->
+        <meta-data
+            android:name="android.support.test.runner"
+            android:value="androidx.test.runner.AndroidJUnitRunner"/>
+
         <!-- Main Activity -->
         <activity
             android:name=".MainActivity"
@@ -23,75 +28,24 @@
             </intent-filter>
         </activity>
 
-<!--         Login Activity -->
-        <activity
-            android:name=".LoginActivity"
-            android:exported="true" />
-        <activity
-            android:name=".DMListActivity"
-            android:exported="true" />
-
-        <activity
-            android:name=".RegisterActivity"
-            android:exported="true" />
-
-        <activity
-            android:name=".HomeActivity"
-            android:exported="true" />
-
-
-        <!--         Register Activity -->
-        <activity
-            android:name=".NewPostActivity"
-            android:exported="true" />
-
-        <activity
-            android:name=".PostGalleryActivity"
-            android:exported="true" />
-
-        <activity
-            android:name=".SearchActivity"
-            android:exported="true" />
-<!--         Register Activity -->
-        <activity
-            android:name=".PostCameraActivity"
-            android:exported="true" />
-
-        <activity
-            android:name=".ContactsActivity"
-            android:exported="true" />
-
-        <activity
-            android:name=".ProfileActivity"
-            android:exported="true" />
-        <activity
-            android:name=".EditProfileActivity"
-            android:exported="true" />
-
-        <activity
-            android:name=".FollowerActivity"
-            android:exported="true" />
-
-        <activity
-            android:name=".FollowingActivity"
-            android:exported="true" />
-
-        <activity
-            android:name=".VideoCallActivity"
-            android:exported="true" />
-
-        <activity
-            android:name=".ChatActivity"
-            android:exported="true" />
-
-        <activity
-            android:name=".ChatHiddenActivity"
-            android:exported="true" />
-
-        <activity
-            android:name=".CallActivity"
-            android:exported="true" />
-
+        <!-- Login Activity -->
+        <activity android:name=".LoginActivity" android:exported="true" />
+        <activity android:name=".DMListActivity" android:exported="true" />
+        <activity android:name=".RegisterActivity" android:exported="true" />
+        <activity android:name=".HomeActivity" android:exported="true" />
+        <activity android:name=".NewPostActivity" android:exported="true" />
+        <activity android:name=".PostGalleryActivity" android:exported="true" />
+        <activity android:name=".SearchActivity" android:exported="true" />
+        <activity android:name=".PostCameraActivity" android:exported="true" />
+        <activity android:name=".ContactsActivity" android:exported="true" />
+        <activity android:name=".ProfileActivity" android:exported="true" />
+        <activity android:name=".EditProfileActivity" android:exported="true" />
+        <activity android:name=".FollowerActivity" android:exported="true" />
+        <activity android:name=".FollowingActivity" android:exported="true" />
+        <activity android:name=".VideoCallActivity" android:exported="true" />
+        <activity android:name=".ChatActivity" android:exported="true" />
+        <activity android:name=".ChatHiddenActivity" android:exported="true" />
+        <activity android:name=".CallActivity" android:exported="true" />
 
     </application>
 

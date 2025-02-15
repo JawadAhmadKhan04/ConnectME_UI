@@ -32,7 +32,7 @@ class ChatHiddenActivity : AppCompatActivity() {
         // Initialize Adapters
         chatHiddenAdapter = ChatHiddenAdapter(messagesHiddenList)
         chatAdapter = ChatAdapter(messagesList)
-        
+
         val layoutManager = LinearLayoutManager(this).apply{
             stackFromEnd = true
             reverseLayout = false

@@ -37,13 +37,23 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.junit.junit)
+
+    // Test dependencies
     testImplementation(libs.junit)
+    testImplementation(libs.junit) // For unit tests
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(libs.androidx.junit.v115) // For Android instrumentation tests
+    androidTestImplementation(libs.androidx.espresso.core.v351) // Espresso for UI tests
+    androidTestImplementation(libs.androidx.runner) // Test runner
+    androidTestImplementation(libs.androidx.rules) // Test rules
+
+    androidTestImplementation(libs.androidx.espresso.intents.v361) // Add this line
 }
+
