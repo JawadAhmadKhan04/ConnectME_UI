@@ -69,10 +69,18 @@ class ChatActivity : AppCompatActivity() {
         messagesList = mutableListOf()
         chatAdapter = ChatAdapter(messagesList)
 
-        chatRecyclerView.apply {
-            layoutManager = LinearLayoutManager(this@ChatActivity)
-            adapter = chatAdapter
+        val layoutManager=LinearLayoutManager(this).apply{
+            stackFromEnd = true
+            reverseLayout = false
         }
+
+        chatRecyclerView.layoutManager = layoutManager
+        chatRecyclerView.adapter = chatAdapter
+//
+//        chatRecyclerView.apply {
+//            layoutManager = LinearLayoutManager(this@ChatActivity)
+//            adapter = chatAdapter
+//        }
 
         // Set click listeners
         findViewById<Button>(R.id.view_profile_btn).setOnClickListener {
@@ -96,14 +104,14 @@ class ChatActivity : AppCompatActivity() {
         chatAdapter.addMessage(ChatMessage("Hi I am great. WBU?", 2)) // Sent by user
         chatAdapter.addMessage(ChatMessage("I am doing well", 1)) // Sent by user
         chatAdapter.addMessage(ChatMessage("Good to know", 2)) // Sent by user
-        chatAdapter.addMessage(ChatMessage("Hello how are you?", 1)) // Sent by user
-        chatAdapter.addMessage(ChatMessage("Hi I am great. WBU?", 2)) // Sent by user
-        chatAdapter.addMessage(ChatMessage("I am doing well", 1)) // Sent by user
-        chatAdapter.addMessage(ChatMessage("Good to know", 2)) // Sent by user
-        chatAdapter.addMessage(ChatMessage("Hello how are you?", 1)) // Sent by user
-        chatAdapter.addMessage(ChatMessage("Hi I am great. WBU?", 2)) // Sent by user
-        chatAdapter.addMessage(ChatMessage("I am doing well", 1)) // Sent by user
-        chatAdapter.addMessage(ChatMessage("Good to know", 2)) // Sent by user
+//        chatAdapter.addMessage(ChatMessage("Hello how are you?", 1)) // Sent by user
+//        chatAdapter.addMessage(ChatMessage("Hi I am great. WBU?", 2)) // Sent by user
+//        chatAdapter.addMessage(ChatMessage("I am doing well", 1)) // Sent by user
+//        chatAdapter.addMessage(ChatMessage("Good to know", 2)) // Sent by user
+//        chatAdapter.addMessage(ChatMessage("Hello how are you?", 1)) // Sent by user
+//        chatAdapter.addMessage(ChatMessage("Hi I am great. WBU?", 2)) // Sent by user
+//        chatAdapter.addMessage(ChatMessage("I am doing well", 1)) // Sent by user
+//        chatAdapter.addMessage(ChatMessage("Good to know", 2)) // Sent by user
 
 
 //        val messageInput = findViewById<EditText>(R.id.messageInput)

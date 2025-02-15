@@ -32,16 +32,22 @@ class ChatHiddenActivity : AppCompatActivity() {
         // Initialize Adapters
         chatHiddenAdapter = ChatHiddenAdapter(messagesHiddenList)
         chatAdapter = ChatAdapter(messagesList)
-
-        chatHiddenRecyclerView.apply {
-            layoutManager = LinearLayoutManager(this@ChatHiddenActivity)
-            adapter = chatHiddenAdapter
+        
+        val layoutManager = LinearLayoutManager(this).apply{
+            stackFromEnd = true
+            reverseLayout = false
         }
 
-        chatRecyclerView.apply {
-            layoutManager = LinearLayoutManager(this@ChatHiddenActivity)
-            adapter = chatAdapter
+        val layoutManager2 = LinearLayoutManager(this@ChatHiddenActivity).apply{
+            stackFromEnd = true
+            reverseLayout = false
         }
+
+        chatRecyclerView.layoutManager = layoutManager
+        chatHiddenRecyclerView.layoutManager = layoutManager2
+        chatRecyclerView.adapter = chatAdapter
+        chatHiddenRecyclerView.adapter = chatHiddenAdapter
+
 
         // Set click listeners
         findViewById<Button>(R.id.view_profile_btn).setOnClickListener {
