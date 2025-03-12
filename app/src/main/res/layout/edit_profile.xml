@@ -156,4 +156,20 @@
             android:minHeight="40dp"/>
     </LinearLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            style="@style/CustomButton"
+            android:text="Log Out"
+            android:textColor="@color/white"
+            android:layout_alignParentBottom="true"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
 </LinearLayout>

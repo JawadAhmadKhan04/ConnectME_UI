@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.google.gms.google.services)
 }
 
 android {
@@ -43,6 +44,10 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.junit.junit)
+    implementation(libs.firebase.auth)
+    implementation(libs.androidx.credentials)
+    implementation(libs.androidx.credentials.play.services.auth)
+    implementation(libs.googleid)
 
     // Test dependencies
     testImplementation(libs.junit)
@@ -53,6 +58,11 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core.v351) // Espresso for UI tests
     androidTestImplementation(libs.androidx.runner) // Test runner
     androidTestImplementation(libs.androidx.rules) // Test rules
+
+    // Firebase and Google Auth
+//    implementation(platform("com.google.firebase:firebase-bom:31.5.0"))
+//    implementation("com.google.firebase:firebase-auth-ktx")
+//    implementation("com.google.android.gms:play-services-auth:20.5.0")
 
     androidTestImplementation(libs.androidx.espresso.intents.v361) // Add this line
 }
