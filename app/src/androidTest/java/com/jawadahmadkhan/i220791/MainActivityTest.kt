@@ -27,7 +27,7 @@ class MainActivityTest {
     }
 
     @Test
-    fun testTapOnScreenOpensLoginActivity() {
+    fun testTapOScreenOpensLoginActivity() {
         // Click anywhere on the screen
         onView(withId(android.R.id.content)).perform(click())
 
